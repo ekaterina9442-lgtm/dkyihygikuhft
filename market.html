@@ -67,7 +67,8 @@
     }
 
     function checkVkLink() {
-        let vkUrl = localStorage.getItem('player_vk_url');
+        const email = localStorage.getItem('current_logged_player');
+        let vkUrl = localStorage.getItem('vk_' + email);
         while (!vkUrl) {
             let input = prompt("Введите ссылку на ваш профиль ВК (например: https://vk.com/id12345678):\nВ конце должны быть строго ЦИФРЫ!");
             if (input === null) {
